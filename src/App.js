@@ -1,20 +1,13 @@
-import React, { useState } from 'react';
-import './App.css';
-import AuthContext from './context/AuthContext';
-import Navigation from './components/Navigation';
+import React from 'react';
+// import './App.cs s';
+import Header from './components/header/header';
+import Summary from './components/summary/Summary';
 
 function App() {
-  const [auth, setAuth] = useState(false)
   return (
     <div className="App">
-      <AuthContext.Provider value={{
-        isLoggedIn:auth,
-        setLoggedIn:(value)=>{
-          setAuth(value);
-        }
-      }}>     
-      <Navigation/>
-      </AuthContext.Provider>
+      <Header/>
+      <Summary/>
     </div>
   );
 }
